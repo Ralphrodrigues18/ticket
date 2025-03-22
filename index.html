@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+    <title>TICKET</title>
+</head>
+
+<body>
+    <div id="container">
+        <form id="ticketForm">
+            <h1>Gerador de tickets</h1>
+            
+            <h3>Upload Avatar</h3>
+            <input required type="file" id="avatar">
+    
+            <h3>Nome completo</h3>
+            <input id="nome" required>
+        
+            <h3>Endereço de email</h3>
+            <input id="email" required>
+    
+            <h3>Usuário do GitHub </h3>
+            <input id="github" required>
+    
+            <button type="submit">Avançar</button>
+        </form>
+    </div>
+    <div id="ticket" style="display: none;" class="ticket">
+        <h2> Ticket Gerado</h2>
+        <img id="ticketAvatar" alt="Avatar" class="avatar">
+        <p><strong>Nome:</strong> <span id="ticketNome"></span></p>
+        <p><strong>Email:</strong> <span id="ticketEmail"></span></p>
+        <p><strong>GitHub:</strong> <a id="ticketGithub"></a></p>
+        <button onclick="window.location.reload()">Gerar Novo Ticket</button>
+    </div>
+</body>
+</body>
+
+</html>
