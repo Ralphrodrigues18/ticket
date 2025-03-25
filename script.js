@@ -11,25 +11,25 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-        // Capturar os valores do formulário
+        //pega dos dados da pessoa
         const nome = document.getElementById("nome").value;
         const email = document.getElementById("email").value;
         const github = document.getElementById("github").value;
         const avatarInput = document.getElementById("avatar");
 
-        // Criar um objeto URL para a imagem do avatar
+        //carrega a foto da pessoa
         if (avatarInput.files.length > 0){
             const avatarURL = URL.createObjectURL(avatarInput.files[0]);
             ticketAvatar.src = avatarURL;
         }
 
-        // Atualizar os valores do ticket
+        //adiciona os valores no ticket
         ticketNome.textContent = nome;
         ticketEmail.textContent = email;
         ticketGithub.textContent = github;
         
 
-        // Esconder o formulário e exibir o ticket
+        //esconde o formulario
         container.style.display = "none";
         ticketDiv.style.display = "block";
     });
